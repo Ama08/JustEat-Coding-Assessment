@@ -1,15 +1,14 @@
-package org.ama.service;
+package org.justeat.service;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.ama.model.Address;
-import org.ama.model.Restaurant;
+import org.justeat.model.Address;
+import org.justeat.model.Restaurant;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class RestaurantService {

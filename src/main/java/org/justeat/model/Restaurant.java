@@ -1,4 +1,4 @@
-package org.ama.model;
+package org.justeat.model;
 
 import java.util.List;
 
@@ -8,6 +8,7 @@ public class Restaurant {
     private double rating;
     private Address address;
 
+    public Restaurant() {}
     public Restaurant(String name, List<String> cuisines, double rating, Address address) {
         this.name = name;
         this.cuisines = cuisines;

@@ -1,10 +1,11 @@
-package org.ama.model;
+package org.justeat.model;
 
 public class Address {
     private String city;
     private String firstLine;
     private String postalCode;
 
+    public Address(){}
     public Address(String city, String firstLine, String postalCode) {
         this.city = city;
         this.firstLine = firstLine;
