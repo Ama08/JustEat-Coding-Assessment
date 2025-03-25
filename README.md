@@ -47,7 +47,7 @@ Create a new **GET** request and use the url ``` http://localhost:8080/restauran
 ```
 Only 10 restaurants will be shown.
 
-The application should only display the below data about the restaurants:
+##### The application should only display the below data about the restaurants:
 - Name
 - Cuisines
 - Rating (as a number)
@@ -55,13 +55,15 @@ The application should only display the below data about the restaurants:
 
 ---
 ## Assumptions made
-- Assume that rating is taken from rating.starRating
-- Assume that address inclused city, firstLine and postalCode
-- Assume test cases needed. All good coding needs tests to validate that the funtions are working
-- Assume rating as a number could mean either an int or double. I used double as that was what was shown in the API
+- Assumed that rating is taken from rating.starRating
+- Assumed that address includes city, firstLine and postalCode
+- Assumed test cases needed. All good coding needs tests to validate that the funtions are working
+- Assumed rating as a number could mean either an int or double. I used double as that was what was shown in the API
+- Assumed that the API accepts either outcodes (eg. ```SS14```) or full UK postcodes (eg. ```SS14 3AF```). Both were tested and they work for the new API endpoint.
 
 ---
 ## Improvements and future work
 - Add input validation for postcodes
 - Add web-based UI
-- Add other types of filtering
+- Add other types of filtering (eg by cuisine and rating) as it gives more flexibility
+- Error handling which returns helpful HTTP error codes. This would improve user experience
