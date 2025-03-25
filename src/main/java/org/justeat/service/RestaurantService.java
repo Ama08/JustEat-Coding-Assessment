@@ -35,7 +35,7 @@ public class RestaurantService {
                 //get cuisines
                 List<String> cuisines = new ArrayList<>();
                 for (JsonNode cuisine : restaurant.path("cuisines")) {
-                    cuisines.add((cuisine.get("name").asText()));
+                    cuisines.add((cuisine.path("name").asText()));
                 }
 
                 //get rating
