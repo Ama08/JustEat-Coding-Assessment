@@ -68,7 +68,7 @@ Only 10 restaurants will be shown.
 
 ---
 ## Improvements and future work
-- Add input validation for postcodes
+- Add custome exceptions
 - Add web-based UI
 - Add other types of filtering (eg by cuisine and rating) as it gives more flexibility
 - Error handling which returns helpful HTTP error codes. This would improve user experience
