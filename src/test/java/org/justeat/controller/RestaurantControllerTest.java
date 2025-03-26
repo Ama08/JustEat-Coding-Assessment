@@ -1,5 +1,4 @@
 package org.justeat.controller;
-import org.justeat.controller.RestaurantController;
 import org.justeat.model.Address;
 import org.justeat.model.Restaurant;
 import org.justeat.service.RestaurantService;
@@ -48,7 +47,7 @@ public class RestaurantControllerTest {
     }
 
     @Test
-    void test_shouldReturnReastaurantWithAllFields() throws Exception {
+    void test_shouldReturnRestaurantWithAllFields() throws Exception {
         Restaurant restaurants = new Restaurant("Test Restaurant", List.of("Chicken"),4.6, new Address("London", "33 Test Drive", "CT1 2EH"));
 
         when(restaurantService.fetchRestaurants("CT1 2EH")).thenReturn(List.of(restaurants));
@@ -59,6 +58,15 @@ public class RestaurantControllerTest {
                 .andExpect(jsonPath("$[0].cuisines").isArray())
                 .andExpect(jsonPath("$[0].rating").value(4.6))
                 .andExpect(jsonPath("$[0].address.postalCode").value("CT1 2EH"));
+    }
+
+    @Test
+    void test_shouldReturnBadRequestForInvalidPostcode() throws Exception {
+        when(restaurantService.fetchRestaurants("INVALID123"))
+                .thenThrow(new RuntimeException("Invalid postcode"));
+
+        mockMvc.perform(get("/restaurants/INVALID123"))
+                .andExpect(status().isBadRequest());
     }
 
 }

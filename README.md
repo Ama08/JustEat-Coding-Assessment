@@ -1,6 +1,6 @@
 # Just Eat Restaurant Search API
 
-This is a Spring Boot application that fetches restautant data from Just Eat's public API and displays key details for a given postcode.
+This is a Spring Boot application that fetches restaurant data from Just Eat's public API and displays key details for a given postcode.
 
 ---
 
@@ -9,21 +9,21 @@ This is a Spring Boot application that fetches restautant data from Just Eat's p
 - Java 17
 - Maven 3.X
 - Postman (or any other HTTP client)
-- You may be prompeted to download ```corretto-17.0.14``` once you open the application , please download this in order for the application to run
+- You may be prompted to download ```corretto-17.0.14``` once you open the application , please download this in order for the application to run
 
 ### Build the project 
 Clone the repository:
 ```bash
 git clone https://github.com/Ama08/JustEat-Coding-Assessment.git
 ```
-Once you have cloned the repository, it is time to build the project:
+Once you have cloned the repository and opened the application up, it is time to build the project:
 ```bash
 mvn clean install
 mvn spring-boot:run
 ```
 
 ### Run the application
-By default the server runs on ``` http://localhost:8080 ```
+By default, the server runs on ``` http://localhost:8080 ```
 
 Endpoint:
 ```bash
@@ -62,9 +62,9 @@ Only 10 restaurants will be shown.
 ## Assumptions made
 - Assumed that rating is taken from rating.starRating
 - Assumed that address includes city, firstLine and postalCode
-- Assumed test cases needed. All good coding needs tests to validate that the funtions are working
+- Assumed test cases needed. All good coding needs tests to validate that the functions are working
 - Assumed rating as a number could mean either an int or double. I used double as that was what was shown in the API
-- Assumed that the API accepts either outcodes (eg. ```SS14```) or full UK postcodes (eg. ```SS14 3AF```). Both were tested and they work for the new API endpoint.
+- Assumed that the API accepts either outcodes (e.g. ```SS14```) or full UK postcodes (e.g. ```SS14 3AF```). Both were tested, and they work for the new API endpoint.
 
 ---
 ## Improvements and future work

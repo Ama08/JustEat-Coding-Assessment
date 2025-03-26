@@ -28,6 +28,10 @@ public class RestaurantService {
             JsonNode root = objectMapper.readTree(response);
             JsonNode restaurants = root.path("restaurants");
 
+            if (!restaurants.isArray() || restaurants.isEmpty()) {
+                throw new RuntimeException("Invalid postcode or no restaurants found.");
+            }
+
             for(JsonNode restaurant : restaurants) {
                 //get name
                 String name = restaurant.path("name").asText();
