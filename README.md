@@ -15,14 +15,18 @@ This is a Spring Boot application that fetches restaurant data from Just Eat's p
 Clone the repository:
 ```bash
 git clone https://github.com/Ama08/JustEat-Coding-Assessment.git
+cd JustEat-Coding-Assessment
 ```
-Once you have cloned the repository and opened the application up, it is time to build the project:
+Once you have cloned the repository and opened the application up, it is time to build the project (in terminal):
 ```bash
 mvn clean install
-mvn spring-boot:run
 ```
 
 ### Run the application
+In terminal run:
+```bash
+mvn spring-boot:run
+```
 By default, the server runs on ``` http://localhost:8080 ```
 
 Endpoint:
