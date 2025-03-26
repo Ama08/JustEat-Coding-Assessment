@@ -9,7 +9,8 @@ This is a Spring Boot application that fetches restaurant data from Just Eat's p
 - Java 17
 - Maven 3.X
 - Postman (or any other HTTP client)
-- You may be prompted to download ```corretto-17.0.14``` once you open the application , please download this in order for the application to run
+
+> You may be prompted to download ```corretto-17.0.14``` once you open the application , please download this in order for the application to run
 
 ### Build the project 
 Clone the repository:
@@ -27,15 +28,23 @@ In terminal run:
 ```bash
 mvn spring-boot:run
 ```
+## Postman Collection
 By default, the server runs on ``` http://localhost:8080 ```
 
 Endpoint:
 ```bash
 GET /restaurants/{postcode}
 ```
+You can test the API using the included Postman collection:
 
-#### Open Postman or any other HTTP client
-Create a new **GET** request and use the url ``` http://localhost:8080/restaurants/{postcode} ``` with the desired postcode (eg. ```SS14 3A``` ) in the ```{postcode}``` section, to get the desired data.
+**File**: `postman/just-eat-api-postman_collection.json`
+
+### Steps:
+1. Open Postman → Click **Import**
+2. Select the JSON file from this repo
+3. Run the request:
+```GET``` with the url ``` http://localhost:8080/restaurants/SS14 3AF ```
+
 #### Sample response
 ```bash
  {
@@ -54,19 +63,21 @@ Create a new **GET** request and use the url ``` http://localhost:8080/restauran
         }
     }
 ```
-Only 10 restaurants will be shown.
 
-##### The application should only display the below data about the restaurants:
+## Displaying Restaurant data
+#### The application will display the below data about the restaurants:
 - Name
 - Cuisines
 - Rating (as a number)
 - Address
 
+Only the first 10 restaurants will be shown.
+
 ---
 ## Assumptions made
 - Assumed that rating is taken from rating.starRating
 - Assumed that address includes city, firstLine and postalCode
-- Assumed test cases needed. All good coding needs tests to validate that the functions are working
+- Assumed test cases needed because testing is important for reliable coding
 - Assumed rating as a number could mean either an int or double. I used double as that was what was shown in the API
 - Assumed that the API accepts either outcodes (e.g. ```SS14```) or full UK postcodes (e.g. ```SS14 3AF```). Both were tested, and they work for the new API endpoint.
 
