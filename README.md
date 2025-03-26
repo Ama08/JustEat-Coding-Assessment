@@ -9,8 +9,13 @@ This is a Spring Boot application that fetches restautant data from Just Eat's p
 - Java 17
 - Maven 3.X
 - Postman (or any other HTTP client)
+- You may be prompeted to download ```corretto-17.0.14``` once you open the application , please download this in order for the application to run
 
 ### Build the project 
+Clone the repository:
+```bash
+git clone https://github.com/Ama08/JustEat-Coding-Assessment.git
+```
 Once you have cloned the repository, it is time to build the project:
 ```bash
 mvn clean install
@@ -26,7 +31,7 @@ GET /restaurants/{postcode}
 ```
 
 #### Open Postman or any other HTTP client
-Create a new **GET** request and use the url ``` http://localhost:8080/restaurants/{postcode} ``` with the desired postcodet to get the desired data.
+Create a new **GET** request and use the url ``` http://localhost:8080/restaurants/{postcode} ``` with the desired postcode (eg. ```SS14 3A``` ) in the ```{postcode}``` section, to get the desired data.
 #### Sample response
 ```bash
  {
