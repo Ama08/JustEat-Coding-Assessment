@@ -1,0 +1,30 @@
+{
+	"info": {
+		"_postman_id": "348462cb-120b-4fc2-ae2b-3bb4b692a7e2",
+		"name": "Just Eat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23126828"
+	},
+	"item": [
+		{
+			"name": "getRestaurantsByPostcode",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/restaurants/SS14 3AF",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restaurants",
+						"SS14 3AF"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
